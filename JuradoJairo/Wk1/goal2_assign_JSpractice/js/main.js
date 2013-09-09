@@ -123,7 +123,7 @@
                 }         
             })
             
-            return vowels;
+            return vowels; // returns the number of vowels
         };
 
     console.log(vowelsInWord('JavaScript'));
@@ -132,24 +132,34 @@
     console.log("6. find number and create an array of even or odd numbers");
 
         //PUT FUNCTION HERE
-        var findNum = function(numbers, bool) {
-            if(bool == "false" || bool == "undefined") {
-                var odd = [];
-                for(var i = 0; i < numbers.length; i++) {
-                    var remainder = 0;
-                    remainder = numbers[i] % 2;
-                    if(remainder != 0) {
-                        odd.push(numbers[i]);
+        var findNum = function(numbers, bool) { // function receives an array, and a boolean
+            if(!(bool == true)) { // if the boolean does not equal true
+                var odd = []; // odd array starts empty
+                numbers.forEach(function (num) { // checks each number in the array
+                    var remainder = 0; // remainder starts at 0
+                    remainder = num % 2; // looks for the remainder of each element when it's divided by 2
+                    if(remainder != 0) { // if the result of the remainder does not equal 0, it means it's an odd number
+                        odd.push(num); // that element will be pushed to the "odd" array
                     }
-                    console.log(odd);
-                }
-                return odd;
+                })
+
+                return odd; // returns the "odd" array
+
+            } else {
+                var even = []; // "even" array starts empty
+                numbers.forEach(function (n) { // checks each number in the array
+                    var remainder = 0; // remainder starts at 0
+                    remainder = n % 2; // looks for the remainder of each element when it's divided by 2
+                    if(remainder == 0) { // if the result of the remainder equals 0; it is pushed to the "even" array
+                        even.push(n);
+                    }
+                })
+
+                return even; // returns the "even" array
             }
-
-
         }
 
     console.log(findNum([31,22,4,67,83,6,5,4]));
-    console.log(findNum([31,22,4,67,83,6,5,4], false));
+    console.log(findNum([31,22,4,67,83,6,5,4], true));
 
 })();
