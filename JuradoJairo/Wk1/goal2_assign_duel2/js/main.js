@@ -1,7 +1,7 @@
 /*
 	Jairo Jurado
-	09/04/2013
-	The Duel - Part 1
+	09/06/2013
+	The Duel - Part 2
 */
 
 (function() {
