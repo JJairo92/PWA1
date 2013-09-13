@@ -61,7 +61,7 @@ console.log("guess loaded");
 	console.log(test);*/
 
 	var domStuff = {
-		btn : document.querySelector("p")
+		btn : document.querySelector("#p")
 	};
 
 	domStuff.btn.addEventListener("click", onClick, false);
