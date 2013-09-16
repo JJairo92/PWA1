@@ -52,13 +52,14 @@
 
 	// Third Student Added by calling the addStudent function
 	student3 = addStudent({name: "Katheryn Hudson", address: {street: "456 Champion Ct.", city: "Los Angeles,", state: "California"}, gpa: [3.2, 4.0, 2.2]});
-	students.push(student3);
+	students.push(student3); // third student added to the students array of objects
 
 	var buttonFunction = function (){
 		var button = document.querySelector(".buttonred");
 		var arrayNumber = 0;
+
 		// Button onClick
-			button.addEventListener("click", onClick, false);
+			button.addEventListener("click", onClick, false); // adds the button event listener
 
 			function onClick (event){
 				var date = new Date();
@@ -86,10 +87,12 @@
 					
 					arrayNumber++;
 					console.log(arrayNumber);
-				} else {
-					button.innerHTML = "Done!!!";
-					button.removeEventListener("click", onClick, false);
-					console.log("It's done");
+						
+					} else {
+						button.innerHTML = "Done!!!"; // changes button text to "done!!!"
+						button.removeEventListener("click", onClick, false); // removes event listener
+						console.log("It's done");
+					}
 				}
 			};
 	};
