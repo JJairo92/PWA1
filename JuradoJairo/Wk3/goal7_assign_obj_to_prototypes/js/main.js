@@ -11,7 +11,7 @@
 
  	// Array that will hold each Person Object created
  	var people = [];
- 	var interval = setInterval(runUpdate,1000);
+ 	var interval = setInterval(runUpdate,1000); // updates every second
 
  	// Query Selectors
  	var dom = {
