@@ -88,11 +88,10 @@
 					arrayNumber++;
 					console.log(arrayNumber);
 						
-					} else {
-						button.innerHTML = "Done!!!"; // changes button text to "done!!!"
-						button.removeEventListener("click", onClick, false); // removes event listener
-						console.log("It's done");
-					}
+				} else {
+					button.innerHTML = "Done!!!"; // changes button text to "done!!!"
+					button.removeEventListener("click", onClick, false); // removes event listener
+					console.log("It's done");
 				}
 			};
 	};
